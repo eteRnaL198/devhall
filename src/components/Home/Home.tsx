@@ -3,12 +3,9 @@ import { Timeline } from "./index";
 
 const Home = () => {
   return (
-    <>
-      <div className="w-full">
-        ホーム
-      </div>
+    <div className="flex flex-col py-2 w-full">
       <Timeline />
-    </>
+    </div>
   )
 }
 
