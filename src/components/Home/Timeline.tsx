@@ -1,4 +1,4 @@
-const Timeline = () => {
+const Timeline: React.FC = () => {
   return (
     <div className="bg-white mx-auto p-4 rounded-lg w-8/12">
       <p className="font-bold text-xl">Twitter Clone 作成</p>

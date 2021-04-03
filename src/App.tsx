@@ -1,11 +1,20 @@
-import React from 'react';
-import { Home, Menu } from './components/index';
+import { useState } from 'react'
+import { Menu, Home, Projects, Teams, Profile } from './components/index';
 
 function App() {
+  const [mainScreen, setMainScreen] = useState("Home");
+  
+  const handleMainScreen = (screen: string) => {
+    setMainScreen(screen);
+  }
+
   return (
     <div className="flex bg-gray-200">
-      <Menu />
-      <Home />
+      <Menu handleMainScreen={handleMainScreen} mainScreen={mainScreen} />
+      <Home mainScreen={mainScreen} />
+      <Projects mainScreen={mainScreen} />
+      <Teams mainScreen={mainScreen} />
+      <Profile mainScreen={mainScreen} />
     </div>
   );
 }
