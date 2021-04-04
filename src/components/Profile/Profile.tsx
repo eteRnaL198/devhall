@@ -5,7 +5,7 @@ type Props = {
 const Profile: React.FC<Props> = ({ mainScreen }) => {
   return (
     (mainScreen !== "Profile") ? null :
-    <div>
+    <div className="w-full">
       profile
     </div>
   )

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Menu, Home, Projects, Teams, Profile } from './components/index';
+import { Menu, Home, Projects, Teams, Messages, Profile } from './components/index';
 
 function App() {
   const [mainScreen, setMainScreen] = useState("Home");
@@ -14,6 +14,7 @@ function App() {
       <Home mainScreen={mainScreen} />
       <Projects mainScreen={mainScreen} />
       <Teams mainScreen={mainScreen} />
+      <Messages mainScreen={mainScreen} />
       <Profile mainScreen={mainScreen} />
     </div>
   );
