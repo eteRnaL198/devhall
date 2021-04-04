@@ -12,7 +12,7 @@ const Menu: React.FC<Props> = ({ handleMainScreen, mainScreen }) => {
       <p className="font-black mb-3 p-3 text-2xl text-white tracking-wider">Dev Hall</p>
       {buttons.map((button, idx) => (
         <MenuButton key={idx} handleMainScreen={handleMainScreen} label={button} mainScreen={mainScreen} />
-      ))}
+        ))}
     </div>
   )
 }

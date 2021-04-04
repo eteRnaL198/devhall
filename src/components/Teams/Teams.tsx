@@ -4,8 +4,10 @@ type Props = {
 
 const Teams: React.FC<Props> = ({ mainScreen }) => {
   return (
-    <>
-    </>
+    (mainScreen !== "Teams") ? null :
+    <div>
+      Teams
+    </div>
   )
 }
 

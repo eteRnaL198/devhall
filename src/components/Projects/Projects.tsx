@@ -4,7 +4,8 @@ type Props = {
 
 const Projects: React.FC<Props> = ({ mainScreen }) => {
   return (
-    <div>
+    (mainScreen !== "Projects") ? null :
+    <div className="w-full">
       <p>プロジェクト</p>
     </div>
   )

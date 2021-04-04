@@ -6,6 +6,7 @@ type Props = {
 
 const Home: React.FC<Props> = ({ mainScreen }) => {
   return (
+    (mainScreen !== "Home") ? null :
     <div className="flex flex-col py-2 w-full">
       <Timeline />
     </div>
