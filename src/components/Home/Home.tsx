@@ -8,6 +8,7 @@ const Home: React.FC<Props> = ({ mainScreen }) => {
   return (
     (mainScreen !== "Home") ? null :
     <div className="flex flex-col py-6 w-full">
+      <button>更新</button>
       <Timeline />
     </div>
   )
