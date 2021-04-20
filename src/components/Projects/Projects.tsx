@@ -24,6 +24,7 @@ const Projects: React.FC<Props> = ({ mainScreen }) => {
           >いいね
         </button>
       </div>
+      {/* <> */}
     </div>
   )
 }
