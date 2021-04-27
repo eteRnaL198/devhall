@@ -2,9 +2,9 @@ type Props = {
   mainScreen: string;
 }
 
-const Teams: React.FC<Props> = ({ mainScreen }) => {
+const Groups: React.FC<Props> = ({ mainScreen }) => {
   return (
-    (mainScreen !== "Teams") ? null :
+    (mainScreen !== "Groups") ? null :
     <div className="w-full">
       <button>作成</button>
       <button>検索</button>
@@ -13,4 +13,4 @@ const Teams: React.FC<Props> = ({ mainScreen }) => {
   )
 }
 
-export default Teams;
+export default Groups;

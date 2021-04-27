@@ -12,9 +12,8 @@ const MenuButton: React.FC<Props> = ({ handleMainScreen, label, mainScreen }) =>
       onClick={() => handleMainScreen(label)}
     >
       {
-        (label === "Home") ? "ホーム" :
         (label === "Projects") ? "プロジェクト" :
-        (label === "Teams") ? "チーム" :
+        (label === "Groups") ? "グループ" :
         (label === "Messages") ? "メッセージ" :
         (label === "Profile") ? "プロフィール" : null
       }
