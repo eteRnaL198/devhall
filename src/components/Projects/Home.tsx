@@ -1,4 +1,4 @@
-import { Timeline } from "../Home/index";
+import { Timeline } from "./index";
 
 type Props = {
   mainScreen: string;
