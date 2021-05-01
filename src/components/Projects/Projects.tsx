@@ -1,3 +1,6 @@
+import React from 'react';
+import { Filter, Timeline } from "./index";
+
 type Props = {
   mainScreen: string;
 }
@@ -5,36 +8,16 @@ type Props = {
 const Projects: React.FC<Props> = ({ mainScreen }) => {
   return (
     (mainScreen !== "Projects") ? null :
-    <>
-      <button
+    <React.Fragment>
+      {/* <button
         className="bg-white flex-1 font-bold mx-2 px-2 rounded-full"
         >作成
-      </button>
+      </button> */}
       <div className="w-full">
-        <div className="flex justify-around mx-3 my-3 overflow-x-scroll">
-          <button
-            className="bg-white flex-1 font-bold mx-2 px-2 rounded-full"
-            >探す
-          </button>
-          <button
-            className="bg-white flex-1 font-bold mx-2 px-2 rounded-full"
-            >進行中
-          </button>
-          <button
-            className="bg-white flex-1 font-bold mx-2 px-2 rounded-full"
-            >募集中
-          </button>
-          <button
-            className="bg-white flex-1 font-bold mx-2 px-2 rounded-full"
-            >応募済
-          </button>
-          <button
-            className="bg-white flex-1 font-bold mx-2 px-2 rounded-full"
-            >いいね
-          </button>
-        </div>
+        <Filter/>
+        <Timeline/>
       </div>
-    </>
+    </React.Fragment>
   )
 }
 

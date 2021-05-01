@@ -17,8 +17,8 @@ const Timeline: React.FC = () => {
           <button>応募</button>
         </div>
       </div>
-  </>
-)
+    </>
+  )
 }
 
 export default Timeline;
