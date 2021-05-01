@@ -1,21 +1,15 @@
 type Props = {
   label: string;
+  name: string;
 }
-const FilterButton: React.FC<Props> = ({ label }) => {
+
+const FilterButton: React.FC<Props> = ({ label, name }) => {
   return (
     <>
       <button
-        className="bg-white flex-1 font-bold mx-2 px-2 rounded-full"
-      >
-        {
-          (label === "search") ? "探す" :
-          (label === "onGoing") ? "進行中" : null
-          // TODO: このやり方以外無いのか．結合度高くね？
-        }
+        className="bg-white font-bold inline-block mx-4 px-4 py-2 rounded-full w-24"
+      >{name}
       </button>
-      {/* 募集中
-      応募済
-      いいね */}
     </>
   )
 }

@@ -13,7 +13,7 @@ const Projects: React.FC<Props> = ({ mainScreen }) => {
         className="bg-white flex-1 font-bold mx-2 px-2 rounded-full"
         >作成
       </button> */}
-      <div className="w-full">
+      <div className="w-full overflow-x-hidden">
         <Filter/>
         <Timeline/>
       </div>
