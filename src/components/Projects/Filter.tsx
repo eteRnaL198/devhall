@@ -31,7 +31,7 @@ const Filter: React.FC = () => {
 
   return (
     <>
-      <div className="mx-3 my-3 overflow-x-scroll whitespace-nowrap">
+      <div className="flex justify-between mx-3 my-3 overflow-x-scroll whitespace-nowrap">
         {filters.map((filter, idx) => (
           <FilterButton key={idx} label={filter.label} name={filter.name} />
         ))}
