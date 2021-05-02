@@ -10,7 +10,7 @@ const Home: React.FC<Props> = ({ mainScreen }) => {
     <div className="flex flex-col py-6 w-full">
       <button>更新 ↺</button>
       <button>作成 +</button>
-      <Timeline />
+      {/* <Timeline /> */}
     </div>
   )
 }

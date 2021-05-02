@@ -1,11 +1,16 @@
 import { FilterButton } from "./index";
 
+type Props = {
+  timeline: string;
+  handleFilterButtonClick: (label: string) => void;
+}
+
 type Filters = {
   label: string;
   name: string;
 }[];
 
-const Filter: React.FC = () => {
+const Filter: React.FC<Props> = ({ timeline, handleFilterButtonClick }) => {
   const filters: Filters = [
     {
       label: 'search',
@@ -31,9 +36,15 @@ const Filter: React.FC = () => {
 
   return (
     <>
-      <div className="flex justify-between mx-3 my-3 overflow-x-scroll whitespace-nowrap">
+      <div className="flex justify-between mx-3 my-3 overflow-x-scroll sticky whitespace-nowrap">
         {filters.map((filter, idx) => (
-          <FilterButton key={idx} label={filter.label} name={filter.name} />
+          <FilterButton
+            key={idx}
+            label={filter.label}
+            name={filter.name}
+            timeline={timeline}
+            handleFilterButtonClick={handleFilterButtonClick}
+          />
         ))}
       </div>
     </>

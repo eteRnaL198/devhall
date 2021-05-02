@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Filter, Timeline } from "./index";
 
 type Props = {
@@ -6,6 +6,12 @@ type Props = {
 }
 
 const Projects: React.FC<Props> = ({ mainScreen }) => {
+  const [timeline, setTimeline] = useState<string>('search');
+
+  const handleFilterButtonClick = (label: string): void => {
+    setTimeline(label);
+  }
+
   return (
     (mainScreen !== "Projects") ? null :
     <React.Fragment>
@@ -14,8 +20,8 @@ const Projects: React.FC<Props> = ({ mainScreen }) => {
         >作成
       </button> */}
       <div className="w-full overflow-x-hidden">
-        <Filter/>
-        <Timeline/>
+        <Filter handleFilterButtonClick={handleFilterButtonClick} timeline={timeline}/>
+        <Timeline timeline={timeline}/>
       </div>
     </React.Fragment>
   )
