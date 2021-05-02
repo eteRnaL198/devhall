@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { Chat } from "./index";
 
-type ChatHistory = string[];
-
+type ChatHistory = {
+  from: string;
+  text: string;
+}[];
 
 const Message: React.FC = () => {
   const [chatHistory, setChatHistory] = useState<ChatHistory>([]);
@@ -9,15 +12,28 @@ const Message: React.FC = () => {
 
   useEffect(() => {
     const tempChats = [
-      "good morning",
-      "hello",
-      "good night",
+      {
+        from: "me",
+        text: "good morning",
+      },
+      {
+        from: "bob",
+        text: "hello",
+      },
+      {
+        from: "tom",
+        text: "good night",
+      }
     ]
     setChatHistory(tempChats);
   }, []);
 
   const handleSendClick = () => {
-    setChatHistory([...chatHistory, inputText]);
+    const newChat = {
+      from: "me",
+      text: inputText,
+    }
+    setChatHistory([...chatHistory, newChat]);
     setInputText("");
   }
 
@@ -25,8 +41,8 @@ const Message: React.FC = () => {
     <div className="flex flex-col h-full p-4">
       <div className="flex-grow">
         <p className="text-xl text">プロジェクト1</p>
-        {chatHistory.map((text, idx) => (
-          <p key={idx}>{text}</p>
+        {chatHistory.map((chat, idx) => (
+          <Chat chat={chat} key={idx}/>
         ))}
       </div>
       <div className="flex h-10">
