@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Menu, Projects, Groups, Messages, Profile } from './components/index';
 
 function App() {
-  const [mainScreen, setMainScreen] = useState("Projects");
+  const [mainScreen, setMainScreen] = useState("Messages");
   
   const handleMainScreen = (screen: string) => {
     setMainScreen(screen);
