@@ -47,13 +47,13 @@ const Message: React.FC = () => {
       </div>
       <div className="flex h-10">
         <input
-          className="flex-grow px-3"
+          className="flex-grow px-3 focus:outline-none"
           onChange={(e) => setInputText(e.target.value)}
           type="text"
           value={inputText}
         />
         <button
-          className="ml-4"
+          className="ml-4 focus:outline-none"
           onClick={handleSendClick}
         >send
         </button>

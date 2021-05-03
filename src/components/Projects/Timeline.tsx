@@ -30,12 +30,12 @@ const Timeline: React.FC<Props> = ({ timeline }) => {
         <p className="mb-4">React, TypeScriptの練習</p>
         <div className="flex justify-around">
           <div className="flex text-xs w-1/4">
-            <button className="border-2 font-bold flex-grow  py-1 rounded-full"
+            <button className="border-2 font-bold flex-grow  py-1 rounded-full focus:outline-none"
             >詳細
             </button>
           </div>
           <div className="flex text-xs w-1/4">
-            <button className="border-2 font-bold flex-grow  py-1 rounded-full"
+            <button className="border-2 font-bold flex-grow  py-1 rounded-full focus:outline-none"
             >いいね
             </button>
             <span className="ml-2 py-1"
@@ -43,7 +43,7 @@ const Timeline: React.FC<Props> = ({ timeline }) => {
             </span>
           </div>
           <div className="flex text-xs w-1/4">
-            <button className="border-2 font-bold flex-grow  py-1 rounded-full"
+            <button className="border-2 font-bold flex-grow  py-1 rounded-full focus:outline-none"
             >応募
             </button>
             <span className="ml-2 py-1"
