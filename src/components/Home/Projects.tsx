@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Timeline } from "./index";
+import { Filter, Timeline } from "./index";
 
 type Props = {
   mainScreen: string;
@@ -7,6 +7,10 @@ type Props = {
 
 const Projects: React.FC<Props> = ({ mainScreen }) => {
   const [timeline, setTimeline] = useState<string>('search');
+
+  const handleFilterButtonClick = (label: string): void => {
+    setTimeline(label);
+  }
 
   return (
     (mainScreen !== "Projects") ? null :
@@ -16,6 +20,7 @@ const Projects: React.FC<Props> = ({ mainScreen }) => {
         >作成
       </button> */}
       <div className="w-full overflow-x-hidden">
+        <Filter handleFilterButtonClick={handleFilterButtonClick} timeline={timeline}/>
         <Timeline timeline={timeline}/>
       </div>
     </React.Fragment>

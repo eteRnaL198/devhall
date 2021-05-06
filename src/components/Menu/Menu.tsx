@@ -12,6 +12,10 @@ type Buttons = {
 const Menu: React.FC<Props> = ({ handleMainScreen, mainScreen }) => {
   const buttons: Buttons = [
     {
+      label: "Home",
+      name: "ホーム",
+    },
+    {
       label: "Projects",
       name: "プロジェクト",
     },
