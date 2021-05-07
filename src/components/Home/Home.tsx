@@ -14,10 +14,11 @@ const Home: React.FC<Props> = ({ mainScreen }) => {
 
   return (
     (mainScreen !== "Home") ? null :
-    <div className="flex flex-col py-6 w-full">
-      <button>作成 +</button>
-      <div className="w-full overflow-x-hidden">
+    <div className="flex flex-col overflow-x-hidden w-full">
+      <div className="flex flex-col items-center w-full">
         <Filter handleFilterButtonClick={handleFilterButtonClick} timeline={timeline}/>
+        <button className="bg-white font-bold mb-3 py-1 rounded-full w-3/4 focus:outline-none"
+        >新規作成 +</button>
         <Timeline timeline={timeline}/>
       </div>
     </div>

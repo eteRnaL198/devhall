@@ -11,10 +11,16 @@ type B = {
   label: string,
 }
 type CardType = A | B;
-// 探す, 募集中， 応募済み， いいね {
+// 探す, 応募済み， いいね {
 //   詳細
 //   いいね
 //   応募
+// }
+// 募集中 {
+//   詳細
+//   いいね
+//   応募
+//   募集を締め切る
 // }
 // 進行中 {
 //   詳細
@@ -25,7 +31,7 @@ type CardType = A | B;
 const Timeline: React.FC<Props> = ({ timeline }) => {
   return (
     <>
-      <div className="bg-white mb-5 mx-auto p-4 rounded-lg w-10/12">
+      <div className="bg-white mb-5 mx-auto p-4 rounded-lg w-11/12">
         <p className="font-bold text-xl">Todoアプリ開発</p>
         <p className="mb-4">React, TypeScriptの練習</p>
         <div className="flex justify-around">

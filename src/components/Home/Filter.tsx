@@ -17,10 +17,6 @@ const Filter: React.FC<Props> = ({ timeline, handleFilterButtonClick }) => {
       name: '探す',
     },
     {
-      label: 'onGoing',
-      name: '進行中',
-    },
-    {
       label: 'lookingFor',
       name: '募集中',
     },
@@ -36,7 +32,7 @@ const Filter: React.FC<Props> = ({ timeline, handleFilterButtonClick }) => {
 
   return (
     <>
-      <div className="flex justify-between mx-3 my-3 overflow-x-scroll sticky whitespace-nowrap">
+      <div className="flex justify-between mx-3 my-3 overflow-x-scroll sticky whitespace-nowrap w-full">
         {filters.map((filter, idx) => (
           <FilterButton
             key={idx}
